@@ -25,7 +25,7 @@
 {% macro practiceList(practices) %}
 <ul class="scape-practice-list">
   {% for p in practices %}
-    <li class="scape-practice-list__item"><a href="{{ p.url }}">{{ p.data.title }}</a></li>
+    <li class="scape-practice-list__item"><a href="{{ p.url | url }}">{{ p.data.title }}</a></li>
   {% endfor %}
 </ul>
 {% endmacro %}
@@ -33,7 +33,7 @@
 {% macro routineList(routines) %}
 <ul class="scape-practice-list scape-practice-list--routines">
   {% for r in routines %}
-    <li class="scape-practice-list__item"><a href="{{ r.url }}">{{ r.data.title }}</a></li>
+    <li class="scape-practice-list__item"><a href="{{ r.url | url }}">{{ r.data.title }}</a></li>
   {% endfor %}
 </ul>
 {% endmacro %}
@@ -140,6 +140,6 @@
     {{ categoryPanel("tender", tenderPractices, labels["tender"], descriptions["tender"]) }}
   </div>
 
-  <link rel="stylesheet" href="/assets/css/mountain-scape.css">
-  <script type="module" src="/assets/js/mountain-scape.js"></script>
+  <link rel="stylesheet" href="{{ '/assets/css/mountain-scape.css' | url }}">
+  <script type="module" src="{{ '/assets/js/mountain-scape.js' | url }}"></script>
 </section>

@@ -62,7 +62,7 @@
 /* Atkinson Hyperlegible — Braille Institute, body face */
 @font-face {
   font-family: "Atkinson Hyperlegible";
-  src: url("/assets/fonts/atkinson/atkinson-hyperlegible-v12-latin-regular.woff2") format("woff2"),
+  src: url("../fonts/atkinson/atkinson-hyperlegible-v12-latin-regular.woff2") format("woff2"),
        local("Atkinson Hyperlegible");
   font-weight: 400;
   font-style: normal;
@@ -70,7 +70,7 @@
 }
 @font-face {
   font-family: "Atkinson Hyperlegible";
-  src: url("/assets/fonts/atkinson/atkinson-hyperlegible-v12-latin-700.woff2") format("woff2"),
+  src: url("../fonts/atkinson/atkinson-hyperlegible-v12-latin-700.woff2") format("woff2"),
        local("Atkinson Hyperlegible Bold");
   font-weight: 700;
   font-style: normal;
@@ -80,7 +80,7 @@
 /* Bricolage Grotesque — display face */
 @font-face {
   font-family: "Bricolage Grotesque";
-  src: url("/assets/fonts/bricolage/bricolage-grotesque-v9-latin-regular.woff2") format("woff2"),
+  src: url("../fonts/bricolage/bricolage-grotesque-v9-latin-regular.woff2") format("woff2"),
        local("Bricolage Grotesque");
   font-weight: 400;
   font-style: normal;
@@ -88,7 +88,7 @@
 }
 @font-face {
   font-family: "Bricolage Grotesque";
-  src: url("/assets/fonts/bricolage/bricolage-grotesque-v9-latin-500.woff2") format("woff2"),
+  src: url("../fonts/bricolage/bricolage-grotesque-v9-latin-500.woff2") format("woff2"),
        local("Bricolage Grotesque Medium");
   font-weight: 500;
   font-style: normal;
@@ -96,7 +96,7 @@
 }
 @font-face {
   font-family: "Bricolage Grotesque";
-  src: url("/assets/fonts/bricolage/bricolage-grotesque-v9-latin-600.woff2") format("woff2"),
+  src: url("../fonts/bricolage/bricolage-grotesque-v9-latin-600.woff2") format("woff2"),
        local("Bricolage Grotesque SemiBold");
   font-weight: 600;
   font-style: normal;
@@ -104,7 +104,7 @@
 }
 @font-face {
   font-family: "Bricolage Grotesque";
-  src: url("/assets/fonts/bricolage/bricolage-grotesque-v9-latin-700.woff2") format("woff2"),
+  src: url("../fonts/bricolage/bricolage-grotesque-v9-latin-700.woff2") format("woff2"),
        local("Bricolage Grotesque Bold");
   font-weight: 700;
   font-style: normal;

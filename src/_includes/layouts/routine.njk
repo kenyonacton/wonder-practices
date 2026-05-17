@@ -4,8 +4,8 @@ layout: layouts/base.njk
 {% from "partials/chip.njk" import chip %}
 {% from "partials/mountain-nav.njk" import mountainNav %}
 <article class="routine">
-  <link rel="stylesheet" href="/assets/css/mountain-nav.css">
-  <link rel="stylesheet" href="/assets/css/routine.css">
+  <link rel="stylesheet" href="{{ '/assets/css/mountain-nav.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/routine.css' | url }}">
   {{ mountainNav(categories) }}
 
   <header class="routine__header">
@@ -28,7 +28,7 @@ layout: layouts/base.njk
         {% set p = collections.practices | findBySlug(step.practice) %}
         {% if p %}
           <li class="routine-step">
-            <a href="{{ p.url }}" class="routine-step__link">
+            <a href="{{ p.url | url }}" class="routine-step__link">
               <span class="routine-step__chip">{{ chip(p.data.accessibility_flag) }}</span>
               <h3 class="routine-step__title">{{ p.data.title }}</h3>
               <p class="routine-step__duration">{{ step.duration_minutes }} {{ "minute" if step.duration_minutes == 1 else "minutes" }}</p>

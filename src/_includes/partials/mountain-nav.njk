@@ -1,22 +1,22 @@
 {% macro mountainNav(currentCategories) -%}
 <nav class="mountain-nav" aria-label="Category navigation">
   <svg class="mountain-nav__svg" viewBox="0 0 1000 330" preserveAspectRatio="xMidYMax meet">
-    <a href="/#quiet" aria-label="Quiet practices">
+    <a href="{{ '/#quiet' | url }}" aria-label="Quiet practices">
       <g class="peak peak-quiet{% if 'quiet' in currentCategories %} current{% endif %}">
         <path d="M 0,300 L 25,290 L 55,277 L 92,258 L 130,235 L 165,218 L 192,212 L 215,205 L 240,215 L 268,232 L 295,250 L 322,258 L 340,254 L 365,265 L 400,285 L 460,300 Z"/>
       </g>
     </a>
-    <a href="/#active" aria-label="Active practices">
+    <a href="{{ '/#active' | url }}" aria-label="Active practices">
       <g class="peak peak-active{% if 'active' in currentCategories %} current{% endif %}">
         <path d="M 200,300 L 225,294 L 260,278 L 297,254 L 325,232 L 340,228 L 358,200 L 380,165 L 398,135 L 415,128 L 430,120 L 445,130 L 460,148 L 480,178 L 495,195 L 510,200 L 530,225 L 555,250 L 585,275 L 615,290 L 645,300 Z"/>
       </g>
     </a>
-    <a href="/#body-intense" aria-label="Body-intense practices">
+    <a href="{{ '/#body-intense' | url }}" aria-label="Body-intense practices">
       <g class="peak peak-body-intense{% if 'body-intense' in currentCategories %} current{% endif %}">
         <path d="M 390,300 L 425,278 L 462,250 L 495,222 L 525,202 L 542,196 L 555,200 L 565,203 L 575,188 L 588,165 L 595,155 L 600,148 L 608,156 L 618,168 L 628,172 L 638,165 L 650,178 L 668,200 L 695,228 L 730,260 L 770,287 L 810,300 Z"/>
       </g>
     </a>
-    <a href="/#tender" aria-label="Tender practices">
+    <a href="{{ '/#tender' | url }}" aria-label="Tender practices">
       <g class="peak peak-tender{% if 'tender' in currentCategories %} current{% endif %}">
         <path d="M 570,300 L 595,295 L 635,282 L 670,265 L 700,248 L 727,235 L 750,228 L 760,225 L 770,222 L 780,223 L 790,224 L 800,222 L 810,220 L 820,222 L 833,225 L 857,238 L 885,258 L 915,275 L 945,290 L 975,300 Z"/>
       </g>

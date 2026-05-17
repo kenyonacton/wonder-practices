@@ -49,6 +49,7 @@ export default function (eleventyConfig) {
       includes: "_includes",
       data: "_data",
     },
+    pathPrefix: "/wonder-practices/",
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     templateFormats: ["njk", "md", "html"],

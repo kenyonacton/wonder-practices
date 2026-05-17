@@ -4,8 +4,8 @@ layout: layouts/base.njk
 {% from "partials/chip.njk" import chip %}
 {% from "partials/mountain-nav.njk" import mountainNav %}
 <article class="practice" data-flag="{{ accessibility_flag }}">
-  <link rel="stylesheet" href="/assets/css/mountain-nav.css">
-  <link rel="stylesheet" href="/assets/css/practice.css">
+  <link rel="stylesheet" href="{{ '/assets/css/mountain-nav.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/practice.css' | url }}">
   {{ mountainNav([accessibility_flag]) }}
   <header class="practice__header">
     <p class="practice__eyebrow">{{ chip(accessibility_flag) }}</p>
