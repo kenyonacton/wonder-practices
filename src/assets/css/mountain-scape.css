@@ -56,7 +56,6 @@
 
 /* Selection state */
 .scape-wrap.has-selection .peak-group {
-  opacity: 0.42;
   transform: scale(0.95, 0.62);
 }
 .scape-wrap.has-selection .peak-group.selected {
