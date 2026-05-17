@@ -1,0 +1,15 @@
+{
+  "name": "wonder-practices",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A reference library of practices for movement, mindfulness, nervous system regulation, and communication.",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "test": "node --test tests/"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

@@ -1,0 +1,54 @@
+---
+layout: layouts/base.njk
+---
+{% from "partials/chip.njk" import chip %}
+{% from "partials/mountain-nav.njk" import mountainNav %}
+<article class="practice" data-flag="{{ accessibility_flag }}">
+  <link rel="stylesheet" href="/assets/css/mountain-nav.css">
+  <link rel="stylesheet" href="/assets/css/practice.css">
+  {{ mountainNav([accessibility_flag]) }}
+  <header class="practice__header">
+    <p class="practice__eyebrow">{{ chip(accessibility_flag) }}</p>
+    <h1>{{ title }}</h1>
+    {% if summary %}<p class="practice__summary">{{ summary }}</p>{% endif %}
+    {% if duration_label %}<p class="practice__duration">{{ duration_label }}</p>{% endif %}
+  </header>
+
+  {% if content_note %}
+    {% include "partials/content-note.njk" %}
+  {% endif %}
+
+  <section class="practice__body">
+    {{ content | safe }}
+  </section>
+
+  {% if phases %}
+    {% include "partials/breathing-figure.njk" %}
+  {% endif %}
+
+  {% if evidence %}
+    <section class="practice__evidence">
+      <h2>Evidence</h2>
+      <p><strong>Rating:</strong> {{ evidence.rating }}</p>
+      <p>{{ evidence.rationale }}</p>
+      {% if evidence.sources %}
+        <ul>
+          {% for source in evidence.sources %}
+            <li>
+              <a href="{{ source.url }}" rel="noreferrer">{{ source.title }}</a>
+              <span class="practice__source-author">— {{ source.author }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </section>
+  {% endif %}
+
+  {% if personal_notes %}
+    <section class="practice__personal">
+      <h2>Personal notes</h2>
+      <p class="practice__personal-tag">From Kenyon's own use, not from the cited literature.</p>
+      <div>{{ personal_notes | safe }}</div>
+    </section>
+  {% endif %}
+</article>

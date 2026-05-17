@@ -1,0 +1,50 @@
+/* Mountain nav. Renders the full four-peak scape as a navigation
+   element on practice and routine detail pages. Each peak is a
+   link back to the home page filtered to that category. */
+
+.mountain-nav { margin: 0 0 var(--space-5); }
+
+.mountain-nav__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.mountain-nav .peak path {
+  transition: fill-opacity 0.3s ease, stroke-opacity 0.3s ease;
+}
+
+/* Per-peak fills (color matches the chip/category) */
+.mountain-nav .peak-quiet path { fill: var(--tag-quiet-bg); }
+.mountain-nav .peak-active path { fill: var(--tag-active-bg); }
+.mountain-nav .peak-body-intense path { fill: var(--tag-body-bg); }
+.mountain-nav .peak-tender path { fill: var(--tag-tender-bg); }
+
+/* Non-current peaks are dimmed so the current one(s) read as the page's
+   category at a glance. */
+.mountain-nav .peak path { fill-opacity: 0.4; }
+.mountain-nav .peak.current path {
+  fill-opacity: 1;
+  stroke: var(--color-highlight);
+  stroke-width: 1.5;
+  stroke-opacity: 0.5;
+}
+
+/* Hover brings non-current peaks halfway up; current stays at full */
+.mountain-nav a:hover .peak path { fill-opacity: 0.75; }
+.mountain-nav a:hover .peak.current path { fill-opacity: 1; }
+
+.mountain-nav a:focus { outline: none; }
+.mountain-nav a:focus-visible .peak path {
+  stroke: var(--color-highlight);
+  stroke-width: 2.5;
+  stroke-opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mountain-nav .peak,
+  .mountain-nav .peak path {
+    transition-duration: 0.15s;
+  }
+}

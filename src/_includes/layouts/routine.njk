@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+---
+{% from "partials/chip.njk" import chip %}
+{% from "partials/mountain-nav.njk" import mountainNav %}
+<article class="routine">
+  <link rel="stylesheet" href="/assets/css/mountain-nav.css">
+  <link rel="stylesheet" href="/assets/css/routine.css">
+  {{ mountainNav(categories) }}
+
+  <header class="routine__header">
+    <div class="routine__chips">
+      {% for cat in categories %}{{ chip(cat) }}{% endfor %}
+    </div>
+    <h1>{{ title }}</h1>
+    {% if summary %}<p class="routine__summary">{{ summary }}</p>{% endif %}
+    {% if duration_label %}<p class="routine__duration">{{ duration_label }}</p>{% endif %}
+  </header>
+
+  <section class="routine__body">
+    {{ content | safe }}
+  </section>
+
+  <section class="routine__steps" aria-labelledby="routine-steps-heading">
+    <h2 id="routine-steps-heading">Steps</h2>
+    <ol class="routine-step-list">
+      {% for step in steps %}
+        {% set p = collections.practices | findBySlug(step.practice) %}
+        {% if p %}
+          <li class="routine-step">
+            <a href="{{ p.url }}" class="routine-step__link">
+              <span class="routine-step__chip">{{ chip(p.data.accessibility_flag) }}</span>
+              <h3 class="routine-step__title">{{ p.data.title }}</h3>
+              <p class="routine-step__duration">{{ step.duration_minutes }} {{ "minute" if step.duration_minutes == 1 else "minutes" }}</p>
+              {% if p.data.summary %}<p class="routine-step__summary">{{ p.data.summary }}</p>{% endif %}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  </section>
+</article>

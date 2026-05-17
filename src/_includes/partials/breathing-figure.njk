@@ -1,0 +1,27 @@
+<section class="breathing" aria-labelledby="breathing-heading">
+  <h2 id="breathing-heading" class="visually-hidden">Guided breathing</h2>
+
+  <figure class="breathing__figure"
+    data-breathing-figure
+    data-phases='{{ phases | dump | safe }}'
+    data-cycles="{{ cycles }}"
+  >
+    <svg class="breathing__circle" viewBox="0 0 200 200" role="presentation" aria-hidden="true">
+      <circle cx="100" cy="100" r="60" />
+    </svg>
+    <figcaption class="breathing__phase" data-breathing-phase>Ready</figcaption>
+    <p class="breathing__remaining" data-breathing-remaining></p>
+    <p class="breathing__progress" data-breathing-progress></p>
+  </figure>
+
+  <p class="breathing__live visually-hidden" data-breathing-live aria-live="polite"></p>
+
+  <div class="breathing__controls">
+    <button type="button" class="button button--primary" data-breathing-start>Start</button>
+    <button type="button" class="button button--ghost" data-breathing-pause hidden>Pause</button>
+    <button type="button" class="button button--ghost" data-breathing-back hidden>Back</button>
+    <button type="button" class="button button--ghost" data-breathing-skip hidden>Skip</button>
+  </div>
+
+  <script type="module" src="/assets/js/timer.js"></script>
+</section>

@@ -1,0 +1,247 @@
+/* Mountain-scape category navigation */
+
+.scape-wrap {
+  background: var(--color-canvas);
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--radius-3);
+  padding: 20px 12px 12px;
+  margin-bottom: var(--space-5);
+}
+
+.scape-intro {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-2);
+  text-align: center;
+}
+
+.scape-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+/* Peak groups */
+.peak-group {
+  cursor: pointer;
+  transition: transform 1.0s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
+  transform-box: view-box;
+}
+
+.peak-group path {
+  transition: fill-opacity 0.5s ease;
+}
+
+.peak-quiet { transform-origin: 220px 300px; }
+.peak-quiet path { fill: var(--tag-quiet-bg); fill-opacity: 0.62; }
+
+.peak-active { transform-origin: 420px 300px; }
+.peak-active path { fill: var(--tag-active-bg); fill-opacity: 0.72; }
+
+.peak-body-intense { transform-origin: 600px 300px; }
+.peak-body-intense path { fill: var(--tag-body-bg); fill-opacity: 0.82; }
+
+.peak-tender { transform-origin: 770px 300px; }
+.peak-tender path { fill: var(--tag-tender-bg); fill-opacity: 0.9; }
+
+/* Focus ring on keyboard focus */
+.peak-group:focus { outline: none; }
+.peak-group:focus-visible path {
+  stroke: var(--color-highlight);
+  stroke-width: 2.5;
+}
+
+/* Selection state */
+.scape-wrap.has-selection .peak-group {
+  opacity: 0.42;
+  transform: scale(0.95, 0.62);
+}
+.scape-wrap.has-selection .peak-group.selected {
+  opacity: 1;
+  transform: scale(1, 1.9);
+}
+.scape-wrap.has-selection .peak-group.selected path {
+  fill-opacity: 1;
+}
+/* Active is the tallest baseline mountain, so its selected scale is reduced */
+.scape-wrap.has-selection .peak-active.selected {
+  transform: scale(1, 1.4);
+}
+
+/* Labels via foreignObject */
+.cat-label {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  transform-origin: left center;
+  transition: color 0.4s, font-weight 0.4s, transform 0.4s;
+  user-select: none;
+}
+
+.cat-label.selected {
+  color: var(--color-text);
+  font-weight: 700;
+  transform: scale(1.18) translateY(-2px);
+}
+
+/* Mobile button row, hidden above 520px */
+.scape-mobile-nav { display: none; }
+
+@media (max-width: 520px) {
+  .scape-svg foreignObject { display: none; }
+
+  .scape-mobile-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+    justify-content: center;
+  }
+
+  .scape-mobile-btn {
+    appearance: none;
+    background: var(--color-card);
+    color: var(--color-text);
+    border: 0.5px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    padding: var(--space-2) var(--space-4);
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    cursor: pointer;
+  }
+
+  .scape-mobile-btn.selected {
+    background: var(--color-card-alt);
+    border-color: var(--color-highlight);
+  }
+}
+
+/* Panel area. The desktop margin clears the in-SVG labels, which render
+   past the SVG viewBox bottom via overflow:visible. */
+.scape-panel-wrap { margin-top: var(--space-7); }
+
+@media (max-width: 520px) {
+  /* Labels are hidden on narrow widths, so the gap can be smaller. */
+  .scape-panel-wrap { margin-top: var(--space-4); }
+}
+
+.scape-panel {
+  background: var(--color-card);
+  border: 0.5px solid var(--color-border);
+  border-radius: var(--radius-2);
+  padding: 18px 20px;
+  min-height: 120px;
+}
+
+.scape-panel[hidden] { display: none; }
+
+.scape-panel-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.scape-panel-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--color-text);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.scape-panel-desc {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-style: italic;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.scape-panel-empty {
+  font-style: italic;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.scape-routines-head {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  margin: var(--space-4) 0 var(--space-2);
+}
+
+.scape-panel-group + .scape-panel-group { margin-top: var(--space-4); }
+
+.scape-panel-group-head {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+  margin: 0 0 var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Practice list inside a panel */
+.scape-practice-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.scape-practice-list__item a {
+  display: block;
+  background: var(--color-card-alt);
+  color: var(--color-text);
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+.scape-practice-list__item a:hover { text-decoration: underline; }
+
+/* Staggered fade for the first four items */
+.scape-practice-list__item { animation: scapeFadeIn 0.4s ease both; }
+.scape-practice-list__item:nth-child(1) { animation-delay: 0.1s; }
+.scape-practice-list__item:nth-child(2) { animation-delay: 0.2s; }
+.scape-practice-list__item:nth-child(3) { animation-delay: 0.3s; }
+.scape-practice-list__item:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes scapeFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Reduced motion: short transitions, no fade-in */
+@media (prefers-reduced-motion: reduce) {
+  .peak-group,
+  .peak-group path,
+  .cat-label { transition-duration: 0.15s; }
+  .scape-practice-list__item { animation: none; }
+}

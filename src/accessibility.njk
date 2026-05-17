@@ -1,0 +1,33 @@
+---
+layout: layouts/page.njk
+title: Accessibility
+permalink: /accessibility/
+description: A few notes on the accessibility decisions baked into the site.
+---
+<p>A few notes on the accessibility decisions baked into the site.</p>
+
+<h2>Shape and color, not color alone</h2>
+<p>Each category has its own symbol: a dot for Quiet, a wave for Active, an outline heart for Body-intense, an open circle for Tender. The categories stay distinguishable even when color isn't enough, such as under color-vision differences or in grayscale.</p>
+
+<h2>Content notes, not warnings</h2>
+<p>Practices that may surface deeper feeling or body memory carry a plain-language content note describing what to expect. The word "trigger" is avoided in favor of specific descriptions.</p>
+
+<h2>Reduced-motion support</h2>
+<p>If your operating system has reduced-motion turned on, the breathing circle and other animations stop automatically. You don't need to set anything on this site. The setting lives in your OS accessibility settings:</p>
+<ul>
+  <li><strong>macOS:</strong> System Settings → Accessibility → Display → Reduce motion</li>
+  <li><strong>iOS:</strong> Settings → Accessibility → Motion → Reduce Motion</li>
+  <li><strong>Windows:</strong> Settings → Accessibility → Visual effects → Animation effects</li>
+  <li><strong>Android:</strong> Settings → Accessibility → Remove animations (varies by device)</li>
+</ul>
+
+<h2>Typography for readability</h2>
+<p>The body face is <a href="https://www.brailleinstitute.org/freefont">Atkinson Hyperlegible</a>, designed by the Braille Institute specifically for low-vision readability. Both fonts are self-hosted on this site rather than loaded from a third-party CDN.</p>
+
+<h2>Touch and keyboard</h2>
+<p>Touch targets are sized for easy tapping. A skip link at the top of every page lets keyboard users jump past the navigation. Focus outlines are visible on every interactive element.</p>
+
+<h2>Palette</h2>
+<p>The palette is tuned for legibility on a single deep-teal canvas, so the site holds up in both bright and dim viewing conditions without needing a light/dark toggle.</p>
+
+<p>More to come.</p>

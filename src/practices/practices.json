@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/practice.njk",
+  "permalink": "/practices/{{ slug or page.fileSlug }}/",
+  "tags": ["practice"]
+}

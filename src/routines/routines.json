@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/routine.njk",
+  "permalink": "/routines/{{ slug or page.fileSlug }}/",
+  "tags": ["routine"]
+}

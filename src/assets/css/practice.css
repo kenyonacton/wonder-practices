@@ -1,0 +1,104 @@
+.practice__header { margin-bottom: var(--space-5); }
+.practice__eyebrow { margin: 0 0 var(--space-3); }
+.practice__summary { color: var(--color-text-secondary); font-size: 18px; }
+.practice__duration { color: var(--color-text-muted); font-size: 14px; }
+
+.practice__body { margin: var(--space-5) 0; }
+
+/* Evidence and personal sections sit on tinted backgrounds without borders
+   for a quieter read. */
+.practice__evidence,
+.practice__personal {
+  background: var(--color-card);
+  border-radius: var(--radius-2);
+  padding: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.practice__personal-tag {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+
+.practice__source-author {
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+/* Breathing figure */
+.breathing { margin: var(--space-6) 0; text-align: center; }
+.breathing__figure { display: inline-flex; flex-direction: column; align-items: center; margin: 0; }
+.breathing__circle { width: 200px; height: 200px; }
+.breathing__circle circle {
+  fill: var(--color-accent);
+  opacity: 0.3;
+  transform-origin: center;
+  transition-property: transform, opacity;
+  transition-duration: var(--breathing-duration, 600ms);
+  transition-timing-function: ease-in-out;
+}
+/* Expanded state — inhale, or holding the breath in (lungs full) */
+.breathing__figure[data-phase="inhale"] .breathing__circle circle,
+.breathing__figure[data-phase="in"] .breathing__circle circle,
+.breathing__figure[data-phase="hold-full"] .breathing__circle circle,
+.breathing__figure[data-phase="top-up"] .breathing__circle circle { transform: scale(1.5); opacity: 0.6; }
+
+/* Partially expanded — first inhale of cyclic sighing (lungs ~two-thirds full) */
+.breathing__figure[data-phase="partial-inhale"] .breathing__circle circle { transform: scale(1.25); opacity: 0.5; }
+
+/* Contracted state — exhale, or holding the breath out (lungs empty) */
+.breathing__figure[data-phase="exhale"] .breathing__circle circle,
+.breathing__figure[data-phase="out"] .breathing__circle circle,
+.breathing__figure[data-phase="hold-empty"] .breathing__circle circle { transform: scale(0.7); opacity: 0.2; }
+
+.breathing__phase {
+  font-family: var(--font-display);
+  font-size: 22px;
+  margin-top: var(--space-3);
+}
+
+.breathing__remaining {
+  font-family: var(--font-body);
+  font-variant-numeric: tabular-nums;
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.breathing__progress {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+.breathing__pacing {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) auto;
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+  color: var(--color-text-secondary);
+}
+
+.breathing__cycles { color: var(--color-text-secondary); }
+
+.breathing__controls {
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .breathing__circle circle {
+    transition: none;
+    transform: none;
+  }
+}

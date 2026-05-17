@@ -1,0 +1,112 @@
+:root {
+  /* Surface */
+  --color-canvas: #163C4E;
+  --color-card: #224B5F;
+  --color-card-alt: #2C5C72;
+  --color-border: #466F82;
+
+  /* Text */
+  --color-text: #88C0C7;
+  --color-text-secondary: #75B0B7;
+  --color-text-muted: #70ABB2;
+
+  /* Brand */
+  --color-accent: #A89AB8;
+  --color-accent-text: #2A2240;
+  --color-highlight: #6CBFC6;
+  --color-heading: #A89AB8;
+
+  /* Tag — Quiet */
+  --tag-quiet-bg: #3D5878;
+  --tag-quiet-text: #D5DEEE;
+  --tag-quiet-symbol: #C5D0E5;
+
+  /* Tag — Active */
+  --tag-active-bg: #2A8E7E;
+  --tag-active-text: #D5F0E5;
+  --tag-active-symbol: #C5E5D8;
+
+  /* Tag — Body-intense */
+  --tag-body-bg: #3D3A6E;
+  --tag-body-text: #D5D3E8;
+  --tag-body-symbol: #C5C3E0;
+
+  /* Tag — Tender */
+  --tag-tender-bg: #5B4D72;
+  --tag-tender-text: #E2D8EC;
+  --tag-tender-symbol: #D8CCE5;
+
+  /* Typography */
+  --font-body: "Atkinson Hyperlegible", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-display: "Bricolage Grotesque", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: "SFMono-Regular", "Consolas", monospace;
+
+  /* Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --radius-1: 4px;
+  --radius-2: 8px;
+  --radius-3: 12px;
+  --radius-pill: 9999px;
+
+  --max-content: 720px;
+}
+
+/* Atkinson Hyperlegible — Braille Institute, body face */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("/assets/fonts/atkinson/atkinson-hyperlegible-v12-latin-regular.woff2") format("woff2"),
+       local("Atkinson Hyperlegible");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("/assets/fonts/atkinson/atkinson-hyperlegible-v12-latin-700.woff2") format("woff2"),
+       local("Atkinson Hyperlegible Bold");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bricolage Grotesque — display face */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/bricolage/bricolage-grotesque-v9-latin-regular.woff2") format("woff2"),
+       local("Bricolage Grotesque");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/bricolage/bricolage-grotesque-v9-latin-500.woff2") format("woff2"),
+       local("Bricolage Grotesque Medium");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/bricolage/bricolage-grotesque-v9-latin-600.woff2") format("woff2"),
+       local("Bricolage Grotesque SemiBold");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/bricolage/bricolage-grotesque-v9-latin-700.woff2") format("woff2"),
+       local("Bricolage Grotesque Bold");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

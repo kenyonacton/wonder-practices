@@ -1,0 +1,23 @@
+Wonder Practices
+Copyright (c) 2026 Kenyon Acton. All rights reserved.
+
+Original content (text, design, code, custom SVG artwork, accessibility
+specification) is licensed under CC BY-NC-ND 4.0. See LICENSE.
+
+This project incorporates the following open-source dependencies and assets,
+each used under their respective licenses:
+
+Eleventy
+  https://www.11ty.dev/
+  Licensed under the MIT License.
+  Copyright (c) Zach Leatherman and Eleventy contributors.
+
+Atkinson Hyperlegible (typeface)
+  https://www.brailleinstitute.org/freefont
+  Created by the Braille Institute of America.
+  Licensed under the SIL Open Font License, Version 1.1.
+
+Bricolage Grotesque (typeface)
+  https://fonts.google.com/specimen/Bricolage+Grotesque
+  Designed by Mathieu Triay.
+  Licensed under the SIL Open Font License, Version 1.1.

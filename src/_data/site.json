@@ -1,0 +1,12 @@
+{
+  "title": "Wonder Practices",
+  "description": "A reference library of practices for movement, mindfulness, nervous system regulation, and communication.",
+  "url": "https://kenyonacton.github.io/wonder-practices",
+  "author": "Kenyon Acton",
+  "nav": [
+    { "label": "Practices", "href": "/" },
+    { "label": "Blog", "href": "/blog/designing-wonder-practices/" },
+    { "label": "Accessibility", "href": "/accessibility/" },
+    { "label": "Colophon", "href": "/colophon/" }
+  ]
+}
