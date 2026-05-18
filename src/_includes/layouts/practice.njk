@@ -8,7 +8,7 @@ layout: layouts/base.njk
   <link rel="stylesheet" href="{{ '/assets/css/practice.css' | url }}">
   {{ mountainNav([accessibility_flag]) }}
   <header class="practice__header">
-    <p class="practice__eyebrow">{{ chip(accessibility_flag) }}</p>
+    <p class="practice__eyebrow"><a class="chip-link" href="{{ ('/#' + accessibility_flag) | url }}">{{ chip(accessibility_flag) }}</a></p>
     <h1>{{ title }}</h1>
     {% if summary %}<p class="practice__summary">{{ summary }}</p>{% endif %}
     {% if duration_label %}<p class="practice__duration">{{ duration_label }}</p>{% endif %}

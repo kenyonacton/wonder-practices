@@ -1,29 +1,47 @@
-/* Chips */
+/* Category label — inline symbol + name, no pill. Echoes the home-page
+   scape panel-head style: a quiet symbol-then-label pairing tinted with
+   the category's color. Used as an eyebrow on practice/routine pages
+   and on each routine step. */
 .chip {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-pill);
   font-size: 14px;
   font-weight: 500;
-  line-height: 1;
-  min-height: 32px;
+  line-height: 1.2;
 }
 
 .chip__symbol { flex-shrink: 0; }
 
-.chip--quiet { background: var(--tag-quiet-bg); color: var(--tag-quiet-text); }
+.chip--quiet { color: var(--tag-quiet-text); }
 .chip--quiet .chip__symbol { color: var(--tag-quiet-symbol); }
 
-.chip--active { background: var(--tag-active-bg); color: var(--tag-active-text); }
+.chip--active { color: var(--tag-active-text); }
 .chip--active .chip__symbol { color: var(--tag-active-symbol); }
 
-.chip--body-intense { background: var(--tag-body-bg); color: var(--tag-body-text); }
+.chip--body-intense { color: var(--tag-body-text); }
 .chip--body-intense .chip__symbol { color: var(--tag-body-symbol); }
 
-.chip--tender { background: var(--tag-tender-bg); color: var(--tag-tender-text); }
+.chip--tender { color: var(--tag-tender-text); }
 .chip--tender .chip__symbol { color: var(--tag-tender-symbol); }
+
+/* Wrapper that turns a chip into a category link without overriding the
+   chip's color/symbol tinting. Used on practice and routine headers so
+   the streamlined label is itself a way back to the category. */
+.chip-link {
+  text-decoration: none;
+  color: inherit;
+}
+.chip-link:hover .chip__label {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.chip-link:focus { outline: none; }
+.chip-link:focus-visible {
+  outline: 2px solid var(--color-highlight);
+  outline-offset: 3px;
+  border-radius: var(--radius-1);
+}
 
 /* Buttons */
 .button {
