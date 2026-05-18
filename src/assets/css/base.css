@@ -110,6 +110,22 @@ main {
 
 .site-nav a[aria-current="page"] { color: var(--color-text); }
 
+@media (max-width: 520px) {
+  .site-header {
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .site-nav ul {
+    gap: var(--space-3) var(--space-4);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-nav a { font-size: 13px; }
+}
+
 .site-footer {
   max-width: var(--max-content);
   margin: var(--space-8) auto var(--space-6);

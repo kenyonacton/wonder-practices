@@ -2,7 +2,7 @@
 {%- set activePractices = collections.practicesByFlag.active -%}
 {%- set bodyPractices = collections.practicesByFlag["body-intense"] -%}
 {%- set tenderPractices = collections.practicesByFlag.tender -%}
-{%- set labels = { "quiet": "Quiet", "active": "Active", "body-intense": "Body-intense", "tender": "Tender" } -%}
+{%- set labels = { "quiet": "Quiet", "active": "Active", "body-intense": "Intense", "tender": "Tender" } -%}
 {%- set descriptions = {
   "quiet": "low intensity, no motion, a starting point",
   "active": "guided breath or movement; anyone can do these without modification",
@@ -64,7 +64,7 @@
     <g class="peak-group peak-active" data-category="active" role="button" tabindex="0" aria-label="Active practices">
       <path d="M 200,300 L 225,294 L 260,278 L 297,254 L 325,232 L 340,228 L 358,200 L 380,165 L 398,135 L 415,128 L 430,120 L 445,130 L 460,148 L 480,178 L 495,195 L 510,200 L 530,225 L 555,250 L 585,275 L 615,290 L 645,300 Z"/>
     </g>
-    <g class="peak-group peak-body-intense" data-category="body-intense" role="button" tabindex="0" aria-label="Body-intense practices">
+    <g class="peak-group peak-body-intense" data-category="body-intense" role="button" tabindex="0" aria-label="Intense practices">
       <path d="M 390,300 L 425,278 L 462,250 L 495,222 L 525,202 L 542,196 L 555,200 L 565,203 L 575,188 L 588,165 L 595,155 L 600,148 L 608,156 L 618,168 L 628,172 L 638,165 L 650,178 L 668,200 L 695,228 L 730,260 L 770,287 L 810,300 Z"/>
     </g>
     <g class="peak-group peak-tender" data-category="tender" role="button" tabindex="0" aria-label="Tender practices">
@@ -88,7 +88,7 @@
   <div class="scape-mobile-nav" aria-label="Category navigation, mobile">
     <button type="button" class="scape-mobile-btn" data-category="quiet" aria-label="Quiet practices">{{ scapeSymbol("quiet") }}<span>Quiet</span></button>
     <button type="button" class="scape-mobile-btn" data-category="active" aria-label="Active practices">{{ scapeSymbol("active") }}<span>Active</span></button>
-    <button type="button" class="scape-mobile-btn" data-category="body-intense" aria-label="Body-intense practices">{{ scapeSymbol("body-intense") }}<span>Body</span></button>
+    <button type="button" class="scape-mobile-btn" data-category="body-intense" aria-label="Intense practices">{{ scapeSymbol("body-intense") }}<span>Intense</span></button>
     <button type="button" class="scape-mobile-btn" data-category="tender" aria-label="Tender practices">{{ scapeSymbol("tender") }}<span>Tender</span></button>
   </div>
 

@@ -1,5 +1,5 @@
 {% macro chip(flag) %}
-{%- set labels = { "quiet": "Quiet", "active": "Active", "body-intense": "Body-intense", "tender": "Tender" } -%}
+{%- set labels = { "quiet": "Quiet", "active": "Active", "body-intense": "Intense", "tender": "Tender" } -%}
 <span class="chip chip--{{ flag }}">
   {%- if flag == "quiet" -%}
     <svg class="chip__symbol" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor"/></svg>
